@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+
+*{
+    box-sizing:border-box;
+}
+
+          /*=============   global ========*/
+  
+  
+html{
+   font-size:62.5%; 
+   
+}
+body{
+    background-color: rgb(242, 216, 138);
+    margin: 0 auto;
+    padding:0;
+    font-size:larger;
+}
+
+            /*==========  header  ==========*/
+.tokyo{
+    font-family: 'Merienda', cursive;
+}
+
+header{
+    text-align:center;
+    background-color: #B66212;
+    background: linear-gradient(#B66212,rgb(206, 150, 96));
+    padding:10px;
+}
+
+.logo img{
+     transition:transform 5s ;
+     width:20%;
+}
+
+.logo img:hover{
+    transform:rotate(-360deg);
+}
+.logo p{
+    font-family: 'Merienda', cursive;
+    font-size:4em;
+    margin:10px;
+}
+
+.welcome{
+    width:30%;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    list-style-type:none;
+    padding:0;
+    background-color:rgb(132, 9, 103); 
+    margin:0;
+}
+
+nav ul li{
+    margin:10px;
+    border-radius:20px;
+    background-color: rgb(207, 151, 99);
+    padding: 15px;
+    color: rgb(132, 9, 103);
+    text-align:center;
+}
+
+nav ul li:hover{
+     background-color:rgb(237, 145, 59);
+     
+}
+
+nav ul li a{
+    text-decoration:none;
+    margin-bottom:2px;
+    color:rgb(132, 9, 103)
+}
+            /* =========   horloge  ======*/
+            
+.horloge{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(207, 151, 99);
+    text-shadow: 0 2px 50px rgba(10,10,10,0.5);
+}
+
+.heures{
+    width: 6.5em;
+    font-size: 1.2em;
+    font-family:  'Merienda', cursive;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.date{
+    font-size: 2.5em;
+    font-family:  'Merienda', cursive;
+    padding-top: 10px;
+}
+
+            /* ==========  main  ==========*/
+            
+fieldset{
+    padding:5px;
+    border:1px solid rgb(207, 151, 99);
+}
+
+form{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    margin:auto;
+    text-align:center;
+}
+
+legend{
+   text-align:center;
+   font-size:20px;
+   font-family:  'Merienda', cursive;
+   margin:0 auto;
+}
+
+label{
+   font-size:10px;
+   font-family:  'Merienda', cursive;
+   padding:5px;
+}
+
+input{
+    border-radius:3px;
+    margin:5px;
+}
+
+select{
+    padding:3px;
+}
+
+.button a {
+    text-decoration: none;
+    border: 1px solid;
+    border-radius:50px;
+    background-color: rgb(207, 151, 99);
+    padding: 10px;
+    color: rgb(132, 9, 103);
+}
+
+.button a:hover{
+    background-color:rgb(237, 145, 59);
+}
+
+img{
+    display:block;
+    margin:auto;
+    height:30%;
+    width:30%;
+    padding:5px;
+} 
+
+.log{
+    display:inline-block;
+    background:#000;
+    border-radius:3px;
+    padding:0 0;
+    margin-top:5px;
+}
+
+.log span{
+    display:inline-block;
+    background:rgb(237, 145, 59);
+    color:#333;
+    border:1px solid #333;
+    padding:12px;
+    font-size:12px;
+    border-radius:3px;
+    cursor:pointer;
+    transition:
+    transform 0.15s ease-out,
+    color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+.log:hover span{
+    transform:translate(-6px, -6px);
+    color:#000;
+    background:rgb(132, 9, 103);
+}
+
+h1{
+    text-align:center;
+    font-family: 'Merienda', cursive;
+    margin:2em;
+}
+
+h1:before{
+    content:"💮";
+}
+
+h1:after{
+    content:"💮";
+}
+h2{
+    text-align:center;
+    font-family: 'Merienda', cursive;
+    margin:1.5em; 
+}
+
+.article{
+    
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.articleCat{
+    width:100%;
+}
+
+article{
+    text-align:center;
+    border:1em solid rgb(207, 151, 99);
+    margin:1em 0 1em 0;
+    padding:2em;
+    width:40%;
+}
+
+.listUsers{
+    text-align: center;
+    border: 1em solid rgb(207, 151, 99);
+    margin: auto;
+    margin-bottom:1em;
+    padding: 2em;
+    width: 40%;
+}
+
+.button{
+   display:inline;
+}
+.cgv p{
+    padding:5px;
+    margin:10px;
+}
+
+
+            /* ==========  panier  =========*/
+            
+.panier a{
+
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 50px;
+    background-color: rgb(207, 151, 99);
+    padding: 10px;
+    color: rgb(132, 9, 103);
+}
+
+.panier a:hover{
+    background-color:rgb(237, 145, 59);
+}
+
+.helloBasket{
+    font-size:2em;
+    text-align:center;
+}
+
+.refBasket{
+    margin:10px;
+    padding:5px;
+    font-size:20px;
+}
+
+            /* ==========  footer  ==========*/
+
+footer{
+    border-top:1px solid rgb(206, 150, 96);
+    width:100%;
+    margin-top:1.5em;
+    font-family:  'Merienda', cursive;
+    padding:15px; 
+}
+
+.foot_contain{
+    margin: 0 auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    font-size:10px;
+    text-align:center;
+}
+
+.foot_contain strong{
+    font-size:1.5em;
+}
+
+.foot_contain ul{
+    list-style-type: none;
+    background-color: inherit;
+     text-align:center;
+}
+
+.foot_contain li{
+    padding:2px 0;
+    margin-top:1.5em;
+   text-align:left;
+}
+
+.foot_contain a{
+    text-decoration:none;
+    color:rgb(132, 9, 103);
+    display:flex;
+    align-items:center;
+    margin-left:10px;
+}
+
+.foot_contain a:hover{
+    color:rgb(206, 150, 96);
+}
+
+.foot_contain a i{
+    font-size:15px;
+}
+
+
+.foot block_contact{
+    padding:5px 0;
+}
+
+.foot block_social{
+     display:flex;
+    flex-direction:row;
+    justify-content:center;
+    text-align:center;
+    margin:0 auto;
+}
+
+.foot block{
+    text-align:center;
+}
+.foot_infos i{
+    padding:5px;
+  
+}
+
+
+
+                /* ===== responsive footer ===*/
+
+/*------tablette------*/
+ 
+@media screen and (max-width: 1100px){
+   
+.foot{
+   
+    margin:0 0;
+}
+
+.foot_contain{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    flex-wrap:wrap;
+    text-align:center;
+    padding:15px; 
+    margin:20px;
+    font-size:15px;
+}
+
+.foot:nth-child(1),
+.foot:nth-child(2){
+    margin-bottom:20px;
+}
+
+.foot_contain li{
+  text-align:left;
+   margin:0 auto;
+}
+}
+
+
+/*------mobile------*/
+
+@media screen and (max-width: 700px){
+   
+.foot_contain{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:left;
+    padding:15px; 
+    font-size:15px;
+}
+.foot_infos{
+     padding:5px;
+     margin:15px;
+}
+foot contain li{
+    text-align:center;
+}
+    
+}
+
+        /* ====== responsive header =====*/
+
+@media screen and (max-width: 700px){
+    
+nav ul{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between; 
+    align-items:center;
+    width:100%;
+    text-align:center;
+    font-size: 20px;
+}
+
+nav ul li{
+    width:80%;
+}
+
+
+}
+
+        /* ====== responsive main ======*/
+
+@media screen and (max-width: 1100px){
+    
+.article{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+}
+   
+article{
+   width:100%;
+} 
+
+.button{
+    display:block;
+    padding:10px;
+    margin:10px;
+} 
+
+.listUsers{
+    width:100%;
+}
+
+.firstTitle{
+    font-size:1.5em;
+}
+}

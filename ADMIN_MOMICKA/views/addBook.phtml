@@ -1,0 +1,77 @@
+
+<?php if(isset($_GET['id']) && $_GET['id'] > 0): ?>
+        <h2> Modifier un ouvrage dans la librairie</h2>
+      <?php else: ?>
+        <h2> Ajouter un ouvrage dans la librairie</h2>
+      <?php endif; ?>
+      
+      
+        <?php if (isset ($errors)):?>
+        <?php include("_errors.phtml") ?>
+        <?php endif ?>
+        
+        <?php if (isset ($valids)):?>
+        <?php include("_valids.phtml") ?>
+        <?php endif ?>
+        
+       <?php if(isset($_GET['id']) && $_GET['id'] > 0): ?>
+        <form enctype = "multipart/form-data" method="POST" action = "index.php?route=submitModifBook&id=<?= htmlspecialchars($_GET['id']) ?>">
+      <?php else: ?>
+        <form enctype = "multipart/form-data" method="POST" action = "index.php?route=addBook&ref=add">
+      <?php endif; ?>
+       
+         <label for="title">Titre</label>
+         <input id="title" type="text" name="title" value="<?= htmlspecialchars($addArticle['addTitle']) ?>"/>
+         
+          <label for="writer">Auteur</label>
+          <input id="writer" type="text" name="writer" value="<?= htmlspecialchars($addArticle['addWriter']) ?>"/>
+          
+       <label for="editor">Editeur</label>
+        <input id="editor" type="text" name="editor" value="<?= htmlspecialchars($addArticle['addEditor']) ?>"/>
+        
+         <label for="price">Prix</label>
+        <input id="price" type="number" name="price" step="0.01" min="0" max="500" value="<?= htmlspecialchars($addArticle['addPrice']) ?>"/>
+        
+        <label for="categorie">Genre : </label>
+            <select id="categorie" name="categorie">
+                <option value="<?= htmlspecialchars($addArticle['addCategory']) ?>">Type d'ouvrage à selectionner</option>
+                <?php foreach ($catBooks as $catBook): ?>
+                    <option value = "<?= htmlspecialchars($catBook['cat_id']) ?>"
+                       <?php if($catBook['cat_id'] == $addArticle['addCategory']): ?>
+                          <?= 'selected' ?>
+                       <?php endif; ?>
+                    ><?= htmlspecialchars($catBook['cat_title']) ?></option>
+                <?php endforeach; ?>
+            </select>
+         
+         <label for="reference">Code ISBN</label>
+         <input id="reference" type="number" name="reference" value="<?= htmlspecialchars($addArticle['addRef']) ?>"/>
+         
+         <label for="nbre_of_page">Nombre de pages</label>
+          <input id="nbre_of_page" type="number" name="nbre_of_page" value="<?= htmlspecialchars($addArticle['addNbreOfPages']) ?>"/>
+          
+         <label for="description">4ème de couverture</label>
+         <textarea id="description" name="description"><?= htmlspecialchars($addArticle['addDescription']) ?></textarea>
+         
+         <fieldset>
+            <label for="image">Couverture : </label>
+            <input id="image" type="file" accept="image/*" name="image">
+        </fieldset>
+        
+        <label for="quantity">Quantité en stock</label>
+         <input id="quantity" type="number" name="quantity" value="<?= htmlspecialchars($addArticle['addQuantity']) ?>"/>
+         
+         <label for="author">Créateur de l'article : </label>
+          <input id="author" type="text" name="author" value="<?= htmlspecialchars($addArticle['addAuthor']) ?>"/>
+         
+         
+       
+        <button type="submit" class="log"><span><?= htmlspecialchars($buttonName) ?> l'article</span></button>
+  
+        
+    </form>
+         
+         
+         
+        
+        

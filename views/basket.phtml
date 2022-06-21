@@ -1,0 +1,42 @@
+<?php if(isset($_SESSION['user']) && $_SESSION['connected'] == true): ?>
+    <div class="helloBasket">
+    <p class="refBasket">Bonjour <?= htmlspecialchars($_SESSION['user']['firstName'])  ?>, bienvenue sur votre panier.</p>
+     </div>
+    <?php else:?>
+        <p class="refBasket">Merci de vous identifier !</p>
+    <?php endif; ?>
+   
+    
+    <?php if(isset($_SESSION['message'])) : ?>
+         <p><?= $_SESSION['message'] ?></p>
+         <?php unset($_SESSION['message']) ?>
+    <?php endif; ?>
+    
+<?php if (isset($_COOKIE['basket']) && $totalBasket != 0): ?>
+  
+  <div class="panier">
+       <?php foreach($catIdBooks as $catIdBook): ?>
+                <article>
+                    <h2><?= htmlspecialchars($catIdBook['art_title']) ?></h2>
+                         <img src="public/uploads/images_Covers/<?= htmlspecialchars($catIdBook['art_image']) ?>" alt="couverture de livres" class="welcome">
+                        <p>Prix: <?= htmlspecialchars($catIdBook['art_price']) ?> €</p>
+                        <p>ISBN: <?= htmlspecialchars($catIdBook['art_ref']) ?></p>
+                        <p>Quantité souhaitée: <?= htmlspecialchars($catIdBook['articles_qte']) ?></p>
+                        <br>
+                        <a href="index.php?route=add_book_basket&id=<?= htmlspecialchars($catIdBook['art_id']) ?>"> + </a>
+                        <a href="index.php?route=less_book_basket&id=<?= htmlspecialchars($catIdBook['art_id']) ?>"> - </a>
+                        <a href="index.php?route=delete_book_basket&id=<?= htmlspecialchars($catIdBook['art_id']) ?>"> supprimer du panier </a>
+                </article>
+                <br>
+      <?php endforeach; ?>
+          
+        <strong class="refBasket">Total: <?= htmlspecialchars($totalBasket) ?> €</strong>
+        <a href="index.php?route=validationBasket">Valider la commande</a>
+   </div>     
+<?php else: ?>    
+     <strong class="refBasket">Votre panier est actuellement vide !</strong>
+<?php endif; ?>
+
+
+
+ 

@@ -1,0 +1,23 @@
+
+<?php foreach($catIdBooks as $catIdBook): ?>
+    <article class="articleCat">
+        <img src="public/uploads/images_Covers/<?= htmlspecialchars($catIdBook['art_image']) ?>" alt="couverture de livres" class="welcome">
+        <h2><?= htmlspecialchars($catIdBook['art_title']) ?></h2>
+        <p>Auteur: <?= htmlspecialchars($catIdBook['art_writer']) ?></p>
+        <p>Editeur: <?= htmlspecialchars($catIdBook['art_editor']) ?></p>
+        <p>Prix: <?= htmlspecialchars($catIdBook['art_price']) ?> €</p>
+        <p>Catégorie: <?= htmlspecialchars($catIdBook['cat_title']) ?></p>
+        <p>ISBN: <?= htmlspecialchars($catIdBook['art_ref']) ?></p>
+        <p><?= htmlspecialchars($catIdBook['art_nbre_of_pages']) ?> pages</p>
+        <p><?= htmlspecialchars($catIdBook['art_description']) ?></p>
+        <p>Quantités en magasin: <?= htmlspecialchars($catIdBook['art_quantity']) ?></p>
+        <br>
+        
+         <?php if(isset($_SESSION['user']) && $_SESSION['connected'] == true): ?>
+       <div class="button">
+        <a href="index.php?route=basket&id=<?= htmlspecialchars($catIdBook['art_id']) ?>">AJOUTER AU PANIER</a>
+       </div>
+          <?php endif; ?>  
+    </article>
+<?php endforeach; ?>
+    

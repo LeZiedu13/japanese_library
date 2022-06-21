@@ -1,0 +1,43 @@
+<fieldset>
+  
+  <legend>Création de compte</legend>
+  
+    
+     <?php require_once('_errors.phtml');?>
+     <?php require_once('_valids.phtml');?>
+    
+
+    <form enctype="multipart/form-data" method="POST" action="index.php?route=addUser&ref=add">
+        <label for="user_lastname">Votre nom de famille</label>
+        <input id="user_lastname" type="text" name="lastname" placeholder= "Votre nom de famille">
+
+        <label for="user_firstname">Votre prénom</label>
+        <input id="user_firstname" type="text" name="firstname" placeholder= "Votre prénom">
+
+        <label for="user_email">Votre e-mail</label>
+        <input id="user_email" type="email" name="email" placeholder= "Votre e-mail">
+
+        <label for="user_password">Votre mot de passe</label>
+        <input id="user_password" type="password" name="password" placeholder= "Plus de 8 caractères"   >
+        <button id="eyes1"><i id="eyesImag1"  class="fa-solid fa-eye-slash"></i></button>
+        
+        <label for="user_password_confirm">Veuillez entrer votre mot de passe une deuxième fois </label>
+        <input id="user_password_confirm" type="password" name="password_confirm" placeholder= "Votre mot de passe une deuxième fois">
+        <button id="eyes2"><i id="eyesImag2"  class="fa-solid fa-eye-slash"></i></button>
+
+        <label for="user_birthday">Votre date d'anniversaire</label>
+        <input id="user_birthday" type="date" name="birthday">
+        
+        <label for="user_address">Votre adresse</label>
+        <input id="user_address" type="text" name="address"  placeholder= "Votre adresse"   >
+
+        <label for="user_cp">Votre code postal</label>
+        <input id="user_cp" type="text" name="cp" placeholder= "Votre code postal"   >
+
+        <label for="user_city">Votre ville</label>
+        <input id="user_city" type="text" name="city"  placeholder= "Votre nom de ville ">
+        <br>
+
+        <button type="submit" class="log"><span>Se connecter</span></button>
+    </form>
+</fieldset>

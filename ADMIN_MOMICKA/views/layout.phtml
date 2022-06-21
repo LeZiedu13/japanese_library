@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librairie japonaise en ligne-Momijigari</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+    <header>
+            <div>
+                <p class="tokyo">A Tokyo, il est:  </p>
+            </div>
+            
+            <div class="horloge">
+                <div class="heures"></div>
+                <div class="date"></div>
+            </div>
+            
+            <div class="logo">
+                <img src="../public/img/logo.png" alt="logo du site">
+                <p>Momijigari</p>
+            </div>
+    </header>
+    
+     
+    
+	<main class="container">
+        <?php include ('_nav.phtml'); ?>
+        
+      <h1 class="firstTitle">Votre librairie japonaise</h1>
+  
+            <div id="LblClignotant"></div>   
+          
+            
+    	    <div id="target"> 
+    	        <?php include $template ?>
+    	    </div> 
+    </main>
+    
+    <footer>
+          <?php include ('footer.phtml'); ?>
+    </footer>
+    <script src="public/js/script.js"></script>   
+    <script src="public/js/main.js"></script>
+</body>
+</html>

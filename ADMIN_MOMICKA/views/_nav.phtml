@@ -1,0 +1,24 @@
+<nav>
+    <ul>
+        <?php if( isset ($_SESSION["user"]) && $_SESSION["user"]["role"] == 1): ?>  
+            <li><a href="index.php?route=home" class="nav"  title="bienvenue">Accueil</a></li>
+             <li><a href="index.php?route=addUser" class="nav" title="créer son compte">Création de compte</a></li>
+      <?php foreach ($catBooks as $catBook): ?>
+          <li><a href="index.php?route=categories&id=<?= htmlspecialchars($catBook['cat_id']) ?>"><?= htmlspecialchars($catBook['cat_title']) ?></a></li>
+     
+     <?php endforeach; ?>  
+                
+        
+            <li><a href="index.php?route=addBook" title="article à ajouter">Ajouter un article</a></li>
+            <li><a href="index.php?route=allUsers" title="clients">Liste des utilisateurs</a></li>
+        <?php endif; ?> 
+        
+        <?php if(isset($_SESSION['user']) && $_SESSION['connected'] == true): ?>   
+            <li><a href="index.php?route=logout" title="fin de session">Se déconnecter</a></li>
+         <?php else: ?>  
+           
+            
+        <?php endif; ?> 
+    </ul>
+</nav>
+

@@ -1,0 +1,32 @@
+<h2>Liste des utilisateurs</h2>
+
+
+<?php foreach($listUsers as $user) : ?>
+        
+    <article class="listUsers">
+        <div>
+            <h3>Nom: <?= htmlspecialchars($user['user_lastname']) ?></h3>
+            <h4>Prénom: <?= htmlspecialchars($user['user_firstname']) ?></h4>
+                <p>Email: <?= htmlspecialchars($user['user_email']) ?></p>
+                <p>Date de naissance: <?= htmlspecialchars($user['user_birthday']) ?></p>
+                <p>Adresse: <?= htmlspecialchars($user['user_address']) ?></p>
+                <p>Code postal: <?= htmlspecialchars($user['user_cp']) ?></p>
+                <p>Ville: <?= htmlspecialchars($user['user_city']) ?></p>
+                <p>Rôle: <?= htmlspecialchars($user['user_role']) ?></p>
+                <p>Date de création du compte: <?= htmlspecialchars($user['user_create_account']) ?></p>
+        </div>
+    </article>
+
+<?php endforeach; ?>
+
+
+
+
+
+
+
+
+
+
+
+

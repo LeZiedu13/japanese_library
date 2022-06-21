@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li><a href="index.php?route=home" class="nav"  title="bienvenue">Accueil</a></li>
+        
+      <?php foreach ($catBooks as $catBook): ?>
+          <li><a href="index.php?route=categories&id=<?= htmlspecialchars($catBook['cat_id']) ?>"><?= htmlspecialchars($catBook['cat_title']) ?></a></li>
+     
+     <?php endforeach; ?>  
+                
+        <?php if(isset($_SESSION['user']) && $_SESSION['connected'] == true): ?>   
+            <li><a href="index.php?route=logout" title="fin de session">Se déconnecter</a></li>
+         <?php else: ?>  
+            <li><a href="index.php?route=addUser" class="nav" title="créer son compte">Création de compte</a></li>
+            <li><a href="index.php?route=connect" class="nav" title="connexion">Se connecter</a></li>
+        <?php endif; ?> 
+        
+        
+    <li><a href="index.php?route=basket" class="nav" title="vos achats">Panier</a></li>
+    </ul>
+</nav>
+
